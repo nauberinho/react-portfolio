@@ -1,9 +1,7 @@
 import React from "react";
 import PropTypes from "react-proptypes";
 import styled from "styled-components";
-import StarFilledIcon from "@material-ui/icons/Star";
-import StarEmptyIcon from "@material-ui/icons/StarBorder";
-import StarHalfIcon from "@material-ui/icons/StarHalf";
+import { Icon } from 'semantic-ui-react';
 import theme from "../../../shared/theme";
 
 const AreaContainer = styled.div`
@@ -39,16 +37,12 @@ const Area = ({ title, techniques }) => (
     {techniques.map((t, key) => {
       const stars = [];
       for (let i = 1; i <= 5; i++) {
-        console.log(i - t.rating);
         if (i <= t.rating && !(i - t.rating) !== -0.5) {
-          console.log(i, "filled");
-          stars.push(<StarFilledIcon />);
+          stars.push(<Icon name="circle" />);
         } else if (i - t.rating === 0.5) {
-          console.log(i, "half");
-          stars.push(<StarHalfIcon />);
+          stars.push(<Icon name="adjust" />);
         } else {
-          console.log(i, "empty");
-          stars.push(<StarEmptyIcon />);
+          stars.push(<Icon name="circle outline" />);
         }
       }
       return (

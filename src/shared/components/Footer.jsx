@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import SectionContainer from "../../shared/components/SectionContainer";
 import theme from "../../shared/theme";
 import mediaQueries from "../../shared/media-queries";
 
@@ -14,6 +13,9 @@ const Content = styled.div`
 
 const Phonenumber = styled.div`
   display: flex;
+  @media ${mediaQueries.tablet("min")} {
+    flex: 1;
+  }
   @media ${mediaQueries.tablet("max")} {
     width: 50%;
   }
@@ -21,12 +23,18 @@ const Phonenumber = styled.div`
 const GitHub = styled.div`
   display: flex;
   line-height: 1.4rem;
+  @media ${mediaQueries.tablet("min")} {
+    flex: 1;
+  }
   @media ${mediaQueries.tablet("max")} {
     width: 50%;
   }
 `;
 const BitBucket = styled.div`
   display: flex;
+  @media ${mediaQueries.tablet("min")} {
+    flex: 1;
+  }
   @media ${mediaQueries.tablet("max")} {
     width: 50%;
   }
@@ -36,6 +44,9 @@ const Contact = styled.div`
   display: flex;
 
   justify-content: flex-end;
+  @media ${mediaQueries.tablet("min")} {
+    flex: 1;
+  }
   @media ${mediaQueries.tablet("max")} {
     width: 50%;
   }

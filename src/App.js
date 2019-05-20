@@ -32,6 +32,7 @@ import mediaQueries from "./shared/media-queries";
 
 const Container = styled.div`
   overflow-x: hidden;
+  min-height: 100vh;
   background: rgba(255, 255, 255, 1);
   background: -moz-linear-gradient(
     top,
@@ -80,13 +81,13 @@ const Container = styled.div`
     text-decoration: none;
   }
   @media ${mediaQueries.laptop("min")} {
-    padding: 1rem 20rem;
+    padding: 0rem 20rem;
   }
   @media ${mediaQueries.laptop("max")} {
-    padding: 1rem 2rem;
+    padding: 0rem 2rem;
   }
   @media ${mediaQueries.tablet("max")} {
-    padding: 1rem 1rem;
+    padding: 0rem 1rem;
   }
 `;
 
@@ -115,9 +116,11 @@ function App() {
       <Container>
         <Router>
           <Menu />
+          <Route exact path="/" component={() => <Redirect to='/about' />} />
+
           <Route exact path="/about" component={About} />
           <Route exact path="/work" component={Work} />
-          <Route exact path="/skills" component={Skills} />
+          <Route exact path="/knowledge" component={Skills} />
           <Footer />
         </Router>
       </Container>

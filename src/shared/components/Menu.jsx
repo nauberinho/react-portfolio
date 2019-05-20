@@ -45,6 +45,8 @@ const MenuWrapper = styled.div`
   @media ${mediaQueries.tablet("max")} {
     padding: 2rem 0 0;
   }
+  font-family: "Fira Sans", "Droid Sans", "Helvetica Neue",
+ sans-serif;
 `;
 
 const StyledLink = styled(Link)`
@@ -78,9 +80,7 @@ const StyledButton = styled.button`
 `;
 
 const Menu = props => {
-  console.log(props);
   const path = props.location.pathname.replace("/", "");
-  console.log(path);
   return (
     <Container>
       <LogoWrapper>
@@ -94,8 +94,8 @@ const Menu = props => {
         <StyledLink to="work">
           <StyledButton isActive={path === "work"}>Work</StyledButton>
         </StyledLink>
-        <StyledLink to="skills">
-          <StyledButton isActive={path === "skills"}>Skills</StyledButton>
+        <StyledLink to="knowledge">
+          <StyledButton isActive={path === "knowledge"}>Knowledge</StyledButton>
         </StyledLink>
       </MenuWrapper>
     </Container>

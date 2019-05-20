@@ -23,6 +23,28 @@ const Content = styled.div`
   }
 `;
 
+const Heading = styled.div`
+@media ${mediaQueries.laptop("min")} {
+  padding: 0 5rem;
+}
+@media ${mediaQueries.tablet("min")} {
+  padding: 0 2rem;
+}
+@media ${mediaQueries.laptop("max")} {
+  padding: 0rem 1rem;
+}
+`
+
+const Title = styled.div`
+  font-size: 1.7rem;
+  font-weight: bold;
+`
+
+const Introduction = styled.div`
+  padding: 1rem 0;
+  font-size: 1.3rem;
+`
+
 const Text = styled.div`
   flex: 2;
   line-height: 1.4rem;
@@ -55,7 +77,12 @@ const Dot = styled.span`
 const About = () => {
   return (
     <SectionContainer>
+      <Heading><Title>Om mig</Title>
+        <Introduction>An overview of which techniques I know and how well I know them.</Introduction>
+      </Heading>
+
       <Content>
+
         <Text>
           <StyledQuoteIcon />
           ajfnsdnfjksd nfjksdnfjksafskldmfklsdmfklsdmfklmsdklfm
