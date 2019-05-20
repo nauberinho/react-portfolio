@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "react-proptypes";
 import styled from "styled-components";
-import { DiMozilla, DiReact, DiGithubBadge, DiJavascript1, DiNodejs } from 'react-icons/di';
+import { DiMozilla, DiReact, DiGithubBadge, DiJavascript1, DiNodejs, DiHeroku } from 'react-icons/di';
 import { FaVuejs } from 'react-icons/fa';
 import GraphQL from '../../icons/Graphql';
 import Firebase from '../../icons/Firebase';
@@ -45,6 +45,9 @@ const Icon = ({ icon, fontSize }) => {
       return <Icon />
     case 'firebase':
       Icon = colourizeIcon(Firebase, 'orange', fontSize);
+      return <Icon />
+    case 'heroku':
+      Icon = colourizeIcon(DiHeroku, 'purple', fontSize);
       return <Icon />
     default:
       Icon = colourizeIcon(DiMozilla, 'red', fontSize);

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import SectionContainer from "../../shared/components/SectionContainer";
 import Area from "./components/Area";
 import mediaQueries from "../../shared/media-queries";
+import theme from "../../shared/theme";
 
 // Data
 import { techniques } from "../../static/data";
@@ -20,6 +21,7 @@ const Content = styled.div`
 const Title = styled.div`
   font-size: 1.7rem;
   font-weight: bold;
+  color: ${theme.colors.black.main};
 `
 
 const Introduction = styled.div`

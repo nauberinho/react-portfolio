@@ -80,8 +80,11 @@ const Container = styled.div`
   a {
     text-decoration: none;
   }
-  @media ${mediaQueries.laptop("min")} {
+  @media ${mediaQueries.laptopL("min")} {
     padding: 0rem 20rem;
+  }
+  @media ${mediaQueries.laptopL("max")} {
+    padding: 0rem 10rem;
   }
   @media ${mediaQueries.laptop("max")} {
     padding: 0rem 2rem;

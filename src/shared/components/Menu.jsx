@@ -76,7 +76,7 @@ const StyledButton = styled.button`
   }
 
   padding: 0.25rem 0 0.25rem;
-  ${({ isActive }) => isActive && `color: black;`};
+  ${({ isActive }) => isActive && `color: ${theme.colors.yellow.main};`};
 `;
 
 const Menu = props => {

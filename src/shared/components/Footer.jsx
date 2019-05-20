@@ -11,7 +11,7 @@ const Content = styled.div`
   flex-wrap: wrap;
 `;
 
-const Phonenumber = styled.div`
+const LinkedIn = styled.div`
   display: flex;
   @media ${mediaQueries.tablet("min")} {
     flex: 1;
@@ -63,7 +63,7 @@ const StyledLink = styled(Link)`
 const Footer = () => {
   return (
     <Content>
-      <Phonenumber>0739- 48 52 13</Phonenumber>
+      <LinkedIn><StyledLink to="https://www.linkedin.com/in/niklasnauber/">LinkedIn</StyledLink></LinkedIn>
       <GitHub>
         <StyledLink to="https://github.com/nauberinho">GitHub</StyledLink>
       </GitHub>

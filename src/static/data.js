@@ -1,8 +1,10 @@
 const projects = [
   {
     title: "Livekvitto",
+    techniques: ['react', 'node.js', 'heroku', 'firebase'],
     summary: "A start up project with real time updating ticket handling",
-    description: "A React based start up project"
+    description: "A React based start up project",
+    website: 'www.livekvitto.se'
   },
   {
     title: "kvdbil.se",
@@ -18,27 +20,32 @@ const projects = [
   },
   {
     title: "Pdgeon",
+    techniques: ['react', 'firebase'],
     summary:
       "Been working as a frontend developer at one of Sweden's largest auction sites.",
     description:
       "Been working as a frontend developer at one of Sweden's largest auction sites."
   },
   {
-    title: "Pagination",
+    title: "100 GitHub repositories",
+    techniques: ['react'],
     summary:
-      "Been working as a frontend developer at one of Sweden's largest auction sites.",
+      "My take on a React developed client side pagination.",
     description:
       "Been working as a frontend developer at one of Sweden's largest auction sites."
   },
   {
     title: 'Node.js + React "Apply for jobs" application',
+    techniques: ['react', 'node.js'],
     summary:
       "Been working as a frontend developer at one of Sweden's largest auction sites.",
     description:
-      "Been working as a frontend developer at one of Sweden's largest auction sites."
+      "Been working as a frontend developer at one of Sweden's largest auction sites.",
+    link: 'Hej'
   },
   {
     title: "Alcohol calculator, trying out React hooks",
+    techniques: ['react'],
     summary:
       "Been working as a frontend developer at one of Sweden's largest auction sites.",
     description:
@@ -68,40 +75,34 @@ const techniques = {
       title: "React",
       summary: "A React based start up project",
       description: "A React based start up project",
-      rating: 3.5
+      rating: 5,
+      key: 'react'
     },
     {
       title: "CSS3",
-      summary:
-        "Been working as a frontend developer at one of Sweden's largest auction sites.",
-      description:
-        "Been working as a frontend developer at one of Sweden's largest auction sites."
+      rating: 5,
+      key: 'css'
+    },
+    {
+      title: 'Sass',
+      rating: 5,
+      key: 'sass'
     },
     {
       title: "HTML5",
-      summary: "A React based start up project",
-      description: "A React based start up project",
-      rating: 3.5
+      key: 'html',
+      rating: 5
     },
     {
       title: "Vue",
-      summary:
-        "Been working as a frontend developer at one of Sweden's largest auction sites.",
-      description:
-        "Been working as a frontend developer at one of Sweden's largest auction sites."
+      rating: 3,
+      key: 'vue'
     },
     {
-      title: "React",
+      title: "Backbone",
       summary: "A React based start up project",
       description: "A React based start up project",
-      rating: 3.5
-    },
-    {
-      title: "CSS3",
-      summary:
-        "Been working as a frontend developer at one of Sweden's largest auction sites.",
-      description:
-        "Been working as a frontend developer at one of Sweden's largest auction sites."
+      rating: 2.5
     }
   ],
   backEnd: [
@@ -109,14 +110,13 @@ const techniques = {
       title: "Node.js",
       summary: "A React based start up project",
       description: "A React based start up project",
-      rating: 3.5
+      rating: 4,
+      key: 'node.js'
     },
     {
       title: "GraphQL",
-      summary:
-        "Been working as a frontend developer at one of Sweden's largest auction sites.",
-      description:
-        "Been working as a frontend developer at one of Sweden's largest auction sites."
+      key: 'graphq',
+      rating: 3.5
     }
   ],
   tools: [
@@ -132,7 +132,8 @@ const techniques = {
         "Been working as a frontend developer at one of Sweden's largest auction sites.",
       description:
         "Been working as a frontend developer at one of Sweden's largest auction sites.",
-      rating: 3.5
+      rating: 4,
+      key: 'git'
     }
   ]
 };

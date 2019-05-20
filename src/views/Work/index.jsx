@@ -3,6 +3,8 @@ import PropTypes from "react-proptypes";
 import styled from "styled-components";
 import _ from 'lodash';
 
+import { Link } from 'react-router-dom';
+
 import ExpansionPanel from "@material-ui/core/ExpansionPanel";
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
@@ -29,7 +31,7 @@ const Content = styled.div`
 
 const Title = styled.div`
   font-size: 1.7rem;
-  font-weight: bold;
+  font-weight: 500;
 `
 
 const Introduction = styled.div`
@@ -38,36 +40,71 @@ const Introduction = styled.div`
 `
 
 const StyledExpansionPanel = styled(ExpansionPanel)`
-  // && {
-  //   box-shadow: none;
-  //   background-color: none!important;
-  //  &:before {
-  //   display: none;
-  //   }
-  // }
+  && {
+    background-color: none!important;
+   &:before {
+    display: none;
+    }
+  }
   
 
-  // &:before { background-color: none!important;}
+  &:before { background-color: none!important;}
 `
 
 const StyledExpansionSummary = styled(ExpansionPanelSummary)`
-  // && {
-  //   padding: 1rem 0;
-  //   font-weight: 600;
-  //   display: flex;
-  // }
+  && {
+    font-weight: 500;
+    @media ${mediaQueries.tablet("min")} {
+      display: flex;
+    }
+  }
+`
+
+const TitleAndTechniques = styled.div`
+flex: 1;
+display: flex;
+  @media ${mediaQueries.tablet("max")} {
+   flex-direction: column;
+  }
 `
 
 const StyledExpansionPanelDetails = styled(ExpansionPanelDetails)`
-  // && {
-  //   padding: 0rem 0 0;
-  // }
+display: flex;
+@media ${mediaQueries.tablet("max")} {
+  flex-direction: column;
+ }
+`
+
+const StyledExpansionPanelDescription = styled.div`
+width: 50%;
+@media ${mediaQueries.tablet("max")} {
+  width: 100%;
+  padding: 0 0 1rem;
+ }
+`
+
+const StyledExpansionPanelSpecs = styled.div`
+width: 50%;
+@media ${mediaQueries.tablet("max")} {
+  width: 100%;
+ }
+`
+
+const SpecsTitle = styled.span`
+font-weight: 500;
+`
+
+const SpecsArea = styled.div`
+padding: 0rem 0 2rem;
 `
 
 const ItemTitle = styled.div`
   font-size: 1.2rem;
   flex: 1;
-  font-weight: 600;
+  @media ${mediaQueries.tablet("max")} {
+    width: 100%;
+  }
+  font-weight: 400;
   transition: 0.2s ease;
   display: flex;
   ${({ isActive }) => isActive && `color: ${theme.colors.yellow.main};`};
@@ -78,7 +115,11 @@ const ItemTitle = styled.div`
 `;
 
 const ItemSummary = styled.div`
- flex: 1;
+  flex: 1;
+  @media ${mediaQueries.tablet("max")} {
+    width: 100%;
+    padding: 1rem 0 0;
+  }
   font-size: 1rem;
   font-weight: 100;
   transition: 0.2s ease;
@@ -90,6 +131,18 @@ const IconWrapper = styled.div`
   display: inline-block;
   margin-right: 1rem;
 `
+
+const StyledLink = styled(Link)`
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: ${theme.colors.yellow.main};
+  font-weight: bold;
+`
+
+
+
 
 
 
@@ -108,10 +161,22 @@ const Work = () => {
           return (
             <StyledExpansionPanel expanded={isActive} onChange={handleChange(p.title)}>
               <StyledExpansionSummary expandIcon={<ExpandMoreIcon />}>
-                <ItemTitle isActive={isActive}><span>{p.title}</span></ItemTitle>
-                <ItemSummary>{_.get(p, 'techniques', []).map(tech => <IconWrapper><Icon icon={tech} fontSize="4rem" /></IconWrapper>)} </ItemSummary>
+                <TitleAndTechniques>
+                  <ItemTitle isActive={isActive}><span>{p.title}</span></ItemTitle>
+                  <ItemSummary>{_.get(p, 'techniques', []).map(tech => <IconWrapper><Icon icon={tech} fontSize="3rem" /></IconWrapper>)} </ItemSummary>
+                </TitleAndTechniques>
               </StyledExpansionSummary>
-              <StyledExpansionPanelDetails>{p.description}</StyledExpansionPanelDetails>
+              <StyledExpansionPanelDetails>
+                <StyledExpansionPanelDescription>{p.description}</StyledExpansionPanelDescription>
+                <StyledExpansionPanelSpecs>
+                  <SpecsArea><SpecsTitle>Tech stack: </SpecsTitle> {p.techniques.join(', ')}</SpecsArea>
+                  {p.link &&
+                    <SpecsArea><StyledLink to={p.link}>Go to repository</StyledLink></SpecsArea>}
+                  {p.website &&
+                    <SpecsArea><StyledLink to={p.website}>Go to website</StyledLink></SpecsArea>}
+
+                </StyledExpansionPanelSpecs>
+              </StyledExpansionPanelDetails>
             </StyledExpansionPanel>
           );
         })}

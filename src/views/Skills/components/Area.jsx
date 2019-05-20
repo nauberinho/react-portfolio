@@ -31,18 +31,26 @@ const TechniqueRating = styled.div`
   color: ${theme.colors.yellow.main};
 `;
 
+const IconWrapper = styled.div`
+color: ${theme.colors.yellow.main};
+opacity: ${({ opacity }) => opacity};
+`
+
+
+
 const Area = ({ title, techniques }) => (
   <AreaContainer>
     <AreaTitle>{title}</AreaTitle>
     {techniques.map((t, key) => {
       const stars = [];
       for (let i = 1; i <= 5; i++) {
+        const opacity = `0.${i + 2}`;
         if (i <= t.rating && !(i - t.rating) !== -0.5) {
-          stars.push(<Icon name="circle" />);
+          stars.push(<IconWrapper opacity={opacity}><Icon name="circle" /></IconWrapper>);
         } else if (i - t.rating === 0.5) {
-          stars.push(<Icon name="adjust" />);
+          stars.push(<IconWrapper opacity={opacity}><Icon name="adjust" /></IconWrapper>);
         } else {
-          stars.push(<Icon name="circle outline" />);
+          stars.push(<IconWrapper opacity={opacity}><Icon name="circle outline" /></IconWrapper>);
         }
       }
       return (

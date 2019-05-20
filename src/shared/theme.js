@@ -3,7 +3,7 @@ const theme = {
     yellow: {
       main: "#D5B507"
     },
-    black: { main: "#353535" },
+    black: { main: "#4E4E4E" },
     red: {
       main: "#C70039"
     },
