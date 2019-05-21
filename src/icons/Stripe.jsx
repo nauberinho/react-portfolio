@@ -1,7 +1,7 @@
 import React from "react";
 
 const SvgStripe = props => (
-  <svg width="1em" height="1em" viewBox="350 50 452 188" {...props}>
+  <svg width="1em" height="1em" viewBox="0 0 452 188" {...props}>
     <defs>
       <path id="stripe_svg__a" d="M.06.667h451.623V188H.06V.667z" />
     </defs>
