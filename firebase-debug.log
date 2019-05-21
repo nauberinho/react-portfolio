@@ -1,0 +1,16 @@
+[debug] [2019-05-21T21:31:51.025Z] ----------------------------------------------------------------------
+[debug] [2019-05-21T21:31:51.027Z] Command:       /usr/bin/node /usr/local/bin/firebase deploy
+[debug] [2019-05-21T21:31:51.027Z] CLI Version:   6.10.0
+[debug] [2019-05-21T21:31:51.027Z] Platform:      linux
+[debug] [2019-05-21T21:31:51.027Z] Node Version:  v8.10.0
+[debug] [2019-05-21T21:31:51.027Z] Time:          Tue May 21 2019 23:31:51 GMT+0200 (CEST)
+[debug] [2019-05-21T21:31:51.027Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-05-21T21:31:51.033Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-05-21T21:31:51.034Z] > authorizing via signed-in user
+[debug] [2019-05-21T21:31:51.034Z] [iam] checking project niklasnauber-a3739 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-05-21T21:31:51.035Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/niklasnauber-a3739:testIamPermissions  
+
+[debug] [2019-05-21T21:31:52.784Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-21T21:31:52.787Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/niklasnauber-a3739  
+ 
