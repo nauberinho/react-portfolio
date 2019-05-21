@@ -46,13 +46,21 @@ const BitBucket = styled.div`
   }
 `;
 
-const Contact = styled.div`
+const Email = styled.div`
   display: flex;
   margin: 1rem auto;
   font-weight: 600;
   @media ${mediaQueries.tablet("min")} {
     flex: 1;
     justify-content: flex-end;
+  }
+  @media ${mediaQueries.tablet("max")} {
+    width: 100%;
+    text-align: center;
+    span {
+      display: inline-block;
+      margin: auto;
+    }
   }
 `;
 
@@ -67,16 +75,27 @@ const StyledLink = styled.a`
 const Footer = () => {
   return (
     <Content>
-      <LinkedIn><StyledLink target="_blank" href="https://www.linkedin.com/in/niklasnauber/">LinkedIn</StyledLink></LinkedIn>
+      <LinkedIn>
+        <StyledLink
+          target="_blank"
+          href="https://www.linkedin.com/in/niklasnauber/"
+        >
+          LinkedIn
+        </StyledLink>
+      </LinkedIn>
       <GitHub>
-        <StyledLink target="_blank" href="https://github.com/nauberinho">GitHub</StyledLink>
+        <StyledLink target="_blank" href="https://github.com/nauberinho">
+          GitHub
+        </StyledLink>
       </GitHub>
       <BitBucket>
         <StyledLink target="_blank" href="https://github.com/nauberinho">
           BitBucket
         </StyledLink>
       </BitBucket>
-      <Contact>niklas.nauber@hotmail.com</Contact>
+      <Email>
+        <span>niklas.nauber@hotmail.com</span>
+      </Email>
     </Content>
   );
 };
