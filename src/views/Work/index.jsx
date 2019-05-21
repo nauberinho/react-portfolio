@@ -11,6 +11,7 @@ import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import SectionContainer from "../../shared/components/SectionContainer";
 import Icon from '../../shared/components/Icon'
+import { MdKeyboardArrowRight } from 'react-icons/md';
 
 // Data
 import { projects } from "../../static/data";
@@ -20,18 +21,18 @@ import theme from "../../shared/theme";
 import mediaQueries from "../../shared/media-queries";
 
 const Content = styled.div`
-  @media ${mediaQueries.laptop("min")} {
-    width: 70%;
-  }
-  @media ${mediaQueries.laptop("max")} {
-    width: 90%;
-  }
+  // @media ${mediaQueries.laptop("min")} {
+  //   width: 90%;
+  // }
+  // @media ${mediaQueries.laptop("max")} {
+  //   width: 90%;
+  // }
   margin: auto;
 `;
 
 const Title = styled.div`
   font-size: 1.7rem;
-  font-weight: 500;
+  font-weight: 600;
 `
 
 const Introduction = styled.div`
@@ -77,6 +78,7 @@ display: flex;
 
 const StyledExpansionPanelDescription = styled.div`
 width: 50%;
+padding: 0 2rem 0 0;
 @media ${mediaQueries.tablet("max")} {
   width: 100%;
   padding: 0 0 1rem;
@@ -129,16 +131,21 @@ const ItemSummary = styled.div`
 
 const IconWrapper = styled.div`
   display: inline-block;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
 `
 
-const StyledLink = styled(Link)`
+const StyledLink = styled.a`
   outline: none;
   border: none;
   background: none;
   cursor: pointer;
   color: ${theme.colors.yellow.main};
   font-weight: bold;
+  display: flex;
+  svg {
+    margin-top: auto;
+    display: inline-block;
+  }
 `
 
 
@@ -171,9 +178,9 @@ const Work = () => {
                 <StyledExpansionPanelSpecs>
                   <SpecsArea><SpecsTitle>Tech stack: </SpecsTitle> {p.techniques.join(', ')}</SpecsArea>
                   {p.link &&
-                    <SpecsArea><StyledLink to={p.link}>Go to repository</StyledLink></SpecsArea>}
+                    <SpecsArea><StyledLink target="_blank" href={p.link}>Go to repository</StyledLink></SpecsArea>}
                   {p.website &&
-                    <SpecsArea><StyledLink to={p.website}>Go to website</StyledLink></SpecsArea>}
+                    <SpecsArea><StyledLink target="_blank" href={p.website}>Go to website <MdKeyboardArrowRight /></StyledLink></SpecsArea>}
 
                 </StyledExpansionPanelSpecs>
               </StyledExpansionPanelDetails>

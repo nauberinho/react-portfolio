@@ -1,10 +1,11 @@
 import React from "react";
 import PropTypes from "react-proptypes";
 import styled from "styled-components";
-import { DiMozilla, DiReact, DiGithubBadge, DiJavascript1, DiNodejs, DiHeroku } from 'react-icons/di';
+import { DiMozilla, DiReact, DiGithubBadge, DiJavascript1, DiNodejs, DiHeroku, DiPython } from 'react-icons/di';
 import { FaVuejs } from 'react-icons/fa';
 import GraphQL from '../../icons/Graphql';
 import Firebase from '../../icons/Firebase';
+import Stripe from '../../icons/Stripe';
 import mediaQueries from "../media-queries";
 import theme from "../theme";
 
@@ -26,7 +27,7 @@ const Icon = ({ icon, fontSize }) => {
       Icon = colourizeIcon(DiMozilla, 'red', fontSize);
       return <Icon />;
     case 'react':
-      Icon = colourizeIcon(DiReact, 'red', fontSize);
+      Icon = colourizeIcon(DiReact, 'blue', fontSize);
       return <Icon />;
     case 'github':
       Icon = colourizeIcon(DiGithubBadge, 'red', fontSize);
@@ -48,6 +49,12 @@ const Icon = ({ icon, fontSize }) => {
       return <Icon />
     case 'heroku':
       Icon = colourizeIcon(DiHeroku, 'purple', fontSize);
+      return <Icon />
+    case 'stripe':
+      Icon = colourizeIcon(Stripe, 'green', fontSize);
+      return <Icon />
+    case 'python':
+      Icon = colourizeIcon(DiPython, 'black', fontSize);
       return <Icon />
     default:
       Icon = colourizeIcon(DiMozilla, 'red', fontSize);

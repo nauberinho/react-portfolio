@@ -8,6 +8,7 @@ import Avatar from "@material-ui/core/Avatar";
 import image from "../../static/images/me.png";
 import theme from "../../shared/theme";
 import mediaQueries from "../../shared/media-queries";
+import { about } from '../../static/data';
 
 const Content = styled.div`
   @media ${mediaQueries.laptop("min")} {
@@ -16,10 +17,10 @@ const Content = styled.div`
   }
   @media ${mediaQueries.tablet("min")} {
     display: flex;
-    padding: 0 2rem;
+    padding: 2rem 0;
   }
   @media ${mediaQueries.laptop("max")} {
-    padding: 0rem 1rem;
+    padding: 0;
   }
 `;
 
@@ -28,11 +29,12 @@ const Heading = styled.div`
   padding: 0 5rem;
 }
 @media ${mediaQueries.tablet("min")} {
-  padding: 0 2rem;
+  padding: 0
 }
 @media ${mediaQueries.laptop("max")} {
-  padding: 0rem 1rem;
+  padding: 0;
 }
+color: ${theme.colors.black.main}
 `
 
 const Title = styled.div`
@@ -48,12 +50,21 @@ const Introduction = styled.div`
 const Text = styled.div`
   flex: 2;
   line-height: 1.4rem;
+  @media ${mediaQueries.laptop("min")} {
+    font-size: 1.15rem;
+  }
+  
   color: ${theme.colors.black.main};
 `;
 
 const Image = styled.div`
   display: flex;
   flex: 1;
+  @media ${mediaQueries.laptop("max")} {
+    justify-content: center;
+    padding: 3rem 0;
+  }
+  
   justify-content: flex-end;
 `;
 
@@ -77,21 +88,15 @@ const Dot = styled.span`
 const About = () => {
   return (
     <SectionContainer>
-      <Heading><Title>Om mig</Title>
-        <Introduction>An overview of which techniques I know and how well I know them.</Introduction>
+      <Heading><Title>About me</Title>
+        <Introduction></Introduction>
       </Heading>
 
       <Content>
 
         <Text>
           <StyledQuoteIcon />
-          ajfnsdnfjksd nfjksdnfjksafskldmfklsdmfklsdmfklmsdklfm
-          ajfnsdnfjksdnfjksdnfjksafskl dmfk lsdmfkls fklmsdklfm ajfnsdnf
-          jksdnfjksdnfjksafskldmfklsdmfklsdm fklmsdklfm ajfnsdnfjksdnfjksd
-          fjksafskldmfklsdmfkl sdmfklmsdklfm ajfnsdnfjk dnfjksd nf
-          jksafskldmfklsdmfklsdmfklmsdklfm ajfns dnf jksdnfjksdnfjks afskldmfkls
-          dmfklsdmfklmsdklfm ajfnsdnfjksdnfjksdnfjksafskldmfklsdmfklsdm
-          fklmsdklfm ajfnsdnfjksdnfjksdnfjksafskldmfklsdmfklsdmfklmsdklfm
+          {about.text}
           <StyledQuoteIcon />
         </Text>
         <Image>

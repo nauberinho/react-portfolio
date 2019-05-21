@@ -6,53 +6,57 @@ import mediaQueries from "../../shared/media-queries";
 
 const Content = styled.div`
   display: flex;
-  padding: 5rem 1rem;
+  @media ${mediaQueries.laptopL("min")} {
+    padding: 5rem 3rem;
+  }
+  @media ${mediaQueries.laptopL("max")} {
+    padding: 3rem 3rem;
+  }
+  @media ${mediaQueries.laptop("max")} {
+    padding: 2rem 1rem;
+  }
+  @media ${mediaQueries.tablet("max")} {
+    padding: 2rem; 1rem;
+    background: none;
+  }
   overflow: hidden;
   flex-wrap: wrap;
 `;
 
 const LinkedIn = styled.div`
   display: flex;
+  margin: 1rem auto;
   @media ${mediaQueries.tablet("min")} {
     flex: 1;
-  }
-  @media ${mediaQueries.tablet("max")} {
-    width: 50%;
   }
 `;
 const GitHub = styled.div`
   display: flex;
+  margin: 1rem auto;
   line-height: 1.4rem;
   @media ${mediaQueries.tablet("min")} {
     flex: 1;
   }
-  @media ${mediaQueries.tablet("max")} {
-    width: 50%;
-  }
 `;
 const BitBucket = styled.div`
   display: flex;
+  margin: 1rem auto;
   @media ${mediaQueries.tablet("min")} {
     flex: 1;
-  }
-  @media ${mediaQueries.tablet("max")} {
-    width: 50%;
   }
 `;
 
 const Contact = styled.div`
   display: flex;
-
-  justify-content: flex-end;
+  margin: 1rem auto;
+  font-weight: 600;
   @media ${mediaQueries.tablet("min")} {
     flex: 1;
-  }
-  @media ${mediaQueries.tablet("max")} {
-    width: 50%;
+    justify-content: flex-end;
   }
 `;
 
-const StyledLink = styled(Link)`
+const StyledLink = styled.a`
   outline: none;
   border: none;
   background: none;
@@ -63,12 +67,12 @@ const StyledLink = styled(Link)`
 const Footer = () => {
   return (
     <Content>
-      <LinkedIn><StyledLink to="https://www.linkedin.com/in/niklasnauber/">LinkedIn</StyledLink></LinkedIn>
+      <LinkedIn><StyledLink target="_blank" href="https://www.linkedin.com/in/niklasnauber/">LinkedIn</StyledLink></LinkedIn>
       <GitHub>
-        <StyledLink to="https://github.com/nauberinho">GitHub</StyledLink>
+        <StyledLink target="_blank" href="https://github.com/nauberinho">GitHub</StyledLink>
       </GitHub>
       <BitBucket>
-        <StyledLink target="_blank" to="https://github.com/nauberinho">
+        <StyledLink target="_blank" href="https://github.com/nauberinho">
           BitBucket
         </StyledLink>
       </BitBucket>

@@ -12,9 +12,6 @@ const Content = styled.div`
   @media ${mediaQueries.laptop("min")} {
     width: 50%;
   }
-  @media ${mediaQueries.laptop("max")} {
-    width: 90%;
-  }
   margin: auto;
 `;
 
@@ -38,6 +35,7 @@ const Skills = () => {
         <Area title="Front End" techniques={techniques.frontEnd} />
         <Area title="Back End" techniques={techniques.backEnd} />
         <Area title="Tools" techniques={techniques.tools} />
+        <Area title="Libraries I use" techniques={techniques.libraries} />
       </Content>
     </SectionContainer>
   );

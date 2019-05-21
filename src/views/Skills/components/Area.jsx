@@ -3,6 +3,7 @@ import PropTypes from "react-proptypes";
 import styled from "styled-components";
 import { Icon } from 'semantic-ui-react';
 import theme from "../../../shared/theme";
+import mediaQueries from "../../../shared/media-queries";
 
 const AreaContainer = styled.div`
   padding: 2rem 0 0 0;
@@ -22,6 +23,9 @@ const Technique = styled.div`
 const TechniqueTitle = styled.div`
   padding: 0.2rem 0;
   flex: 1;
+  @media ${mediaQueries.tablet("min")} {
+    font-size: 1.15rem;
+  }
 `;
 
 const TechniqueRating = styled.div`

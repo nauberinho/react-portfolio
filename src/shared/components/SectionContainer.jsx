@@ -5,22 +5,28 @@ import mediaQueries from "../media-queries";
 import { fadeIn } from "../keyframes";
 
 const Container = styled.div`
-  @media ${mediaQueries.laptop("min")} {
-    padding: 10rem 3rem;
-  }
-  @media ${mediaQueries.laptop("max")} {
-    padding: 5rem 1rem;
-  }
-  @media ${mediaQueries.tablet("max")} {
-    padding: 3rem 1rem;
-  }
-  @media ${mediaQueries.mobileM("max")} {
-    padding: 1rem 1rem;
-  }
+  background: white;  
   overflow: hidden;
   word-wrap: break-word;
   animation: ${fadeIn} 0.5s ease;
-  background: white;
+  @media ${mediaQueries.laptopL("min")} {
+    padding: 1rem 3rem 3rem;
+  }
+  @media ${mediaQueries.laptopL("max")} {
+    padding: 1rem 3rem 3rem;
+  }
+  @media ${mediaQueries.laptop("max")} {
+    padding: 1rem
+  }
+  @media ${mediaQueries.tablet("max")} {
+    padding: 1rem
+    background: none;
+  }
+  @media ${mediaQueries.mobileM("max")} {
+    padding: 1rem
+  }
+  
+  
 `;
 
 const SectionContainer = ({ children }) => {
