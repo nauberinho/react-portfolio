@@ -177,8 +177,8 @@ const Work = () => {
                 <StyledExpansionPanelDescription>{p.description}</StyledExpansionPanelDescription>
                 <StyledExpansionPanelSpecs>
                   <SpecsArea><SpecsTitle>Tech stack: </SpecsTitle> {p.techniques.join(', ')}</SpecsArea>
-                  {p.link &&
-                    <SpecsArea><StyledLink target="_blank" href={p.link}>Go to repository</StyledLink></SpecsArea>}
+                  {_.get(p, 'links', []).map(link => <SpecsArea><StyledLink target="_blank" href={link.url}>{link.text}</StyledLink></SpecsArea>)
+                    }
                   {p.website &&
                     <SpecsArea><StyledLink target="_blank" href={p.website}>Go to website <MdKeyboardArrowRight /></StyledLink></SpecsArea>}
 
