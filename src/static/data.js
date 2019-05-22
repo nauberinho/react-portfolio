@@ -19,7 +19,7 @@ const projects = [
     ],
     summary: "A start up project with real time updating ticket handling",
     description:
-      "An SaaS allowing service companies to create interactive tickets for their customers, allowing the two parties to communicate through e.g. comments and pictures. A project I've spent a lot of time on and grown a lot with.",
+      "A SaaS allowing service companies to create interactive tickets for their customers, allowing the two parties to communicate through e.g. comments and pictures. A project I've spent a lot of time on and grown a lot with.",
     links: [{ url: "https://livekvitto.se/home", text: GO_TO_WEBSITE }]
   },
   {
@@ -27,13 +27,13 @@ const projects = [
     techniques: ["react", "node.js", "python"],
     description: `I've spent the last year working as a consultant at kvdbil.se, one of Sweden´s largest auction websites for cars, both private owned and for companies.
       Developing and maintaining a real time updated e-commerce website like this one includes techniques such as web-socket, polling, pagination, GA tracking.
-       It also recquires the ability to work in agile teams, emphasizing the ability to work together and being able to define and solve complex issues. `,
+       It also requires the ability to work in agile teams, emphasizing the ability to work together and being able to define and solve complex issues. `,
     links: [{ url: "https://www.kvd.se/", text: GO_TO_WEBSITE }]
   },
   {
     title: "Sato Techno Lab",
     techniques: ["backbone", "javascript"],
-    description: `Worked as a consultant at Sato Techno Lab, a world leading manufacturer in the printer indsutry`,
+    description: `Worked as a consultant at Sato Techno Lab, a world leading manufacturer in the printer industry`,
     links: [
       { url: "http://www.satoeurope.com/nordic/home.aspx", text: GO_TO_WEBSITE }
     ]

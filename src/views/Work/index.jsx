@@ -120,7 +120,7 @@ const ItemSummary = styled.div`
   flex: 1;
   @media ${mediaQueries.tablet("max")} {
     width: 100%;
-    padding: 1rem 0 0;
+    padding: 1rem 0;
   }
   font-size: 1rem;
   font-weight: 100;
