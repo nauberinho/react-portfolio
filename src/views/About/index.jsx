@@ -1,7 +1,15 @@
 import React from "react";
 import PropTypes from "react-proptypes";
 import styled from "styled-components";
+import { Link } from 'react-router-dom';
+import { Icon } from 'semantic-ui-react';
 import FormatQuoteIcon from "@material-ui/icons/FormatQuote";
+import {
+  MdLocationOn,
+} from "react-icons/md";
+import {
+  FaCircle,
+} from "react-icons/fa";
 
 import SectionContainer from "../../shared/components/SectionContainer";
 import Avatar from "@material-ui/core/Avatar";
@@ -47,7 +55,7 @@ const Introduction = styled.div`
   font-size: 1.3rem;
 `
 
-const Text = styled.div`
+const TextContainer = styled.div`
   flex: 2;
   line-height: 1.4rem;
   @media ${mediaQueries.laptop("min")} {
@@ -56,6 +64,24 @@ const Text = styled.div`
   
   color: ${theme.colors.black.main};
 `;
+
+const Story = styled.div`
+
+`
+
+const StatusWrapper = styled.div`
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+`
+
+const StatusItem = styled.div`
+  padding: 0 1rem 0 0rem;
+  display: flex;
+  svg{
+    margin:auto;
+  }
+`
 
 const Image = styled.div`
   display: flex;
@@ -85,6 +111,24 @@ const Dot = styled.span`
   font-size: 4rem;
   color: ${theme.colors.yellow.main};
 `;
+
+const StyledLink = styled.a`
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: ${theme.colors.yellow.main};
+  font-weight: bold;
+  display: inline-block;
+  svg {
+    margin-top: auto;
+    display: inline-block;
+  }
+`
+const StyledCircle = styled(FaCircle)`
+font-size: 0.5rem;
+`
+
 const About = () => {
   return (
     <SectionContainer>
@@ -94,11 +138,23 @@ const About = () => {
 
       <Content>
 
-        <Text>
+        <TextContainer>
+          <Story>
           <StyledQuoteIcon />
           {about.text}
           <StyledQuoteIcon />
-        </Text>
+          </Story>
+          <StatusWrapper>'
+            <StatusItem>
+            <StyledCircle /> 
+            &nbsp;&nbsp;Consulting developer
+            </StatusItem>
+            <StatusItem>
+            <MdLocationOn/>&nbsp;&nbsp;Gothenburg, Sweden
+            </StatusItem>
+          </StatusWrapper>
+        </TextContainer>
+        
         <Image>
           <StyledAvatar alt="Me" src={image} />
         </Image>
