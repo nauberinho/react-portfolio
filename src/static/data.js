@@ -267,7 +267,8 @@ const techniques = {
     { title: "rc-slider" },
     { title: "Validate.js" },
     { title: "Accounting.js " },
-    { title: "Axios" }
+    { title: "Axios" },
+    { title: "tinymce-react"}
   ],
   tools: [
     {
