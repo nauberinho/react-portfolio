@@ -50,6 +50,17 @@ const projects = [
     description: ""
   },
   {
+    title: "Next.js - trying out SSR",
+    techniques: ["next.js"],
+    links: [
+      {
+        url: "https://github.com/nauberinho/next.js-try-out",
+        text: GO_TO_REPOSITORY
+      }
+    ],
+    description: ""
+  },
+  {
     title: "Pdgeon",
     techniques: ["react", "firebase"],
     description: "",
@@ -268,7 +279,7 @@ const techniques = {
     { title: "Validate.js" },
     { title: "Accounting.js " },
     { title: "Axios" },
-    { title: "tinymce-react"}
+    { title: "tinymce-react" }
   ],
   tools: [
     {

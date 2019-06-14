@@ -14,6 +14,7 @@ import { FaVuejs } from "react-icons/fa";
 import GraphQL from "../../icons/Graphql";
 import Firebase from "../../icons/Firebase";
 import Stripe from "../../icons/Stripe";
+import NextJS from "../../icons/Nextjs";
 // import Apollo from "../../icons/Apollo";
 import mediaQueries from "../media-queries";
 import theme from "../theme";
@@ -68,8 +69,9 @@ const Icon = ({ icon, fontSize }) => {
     case "python":
       Icon = styleIcon(DiPython, "black", fontSize);
       return <Icon />;
-    case "apollo":
-      Icon = styleIcon(Apollo, "black", fontSize);
+    case "next.js":
+      Icon = styleIcon(NextJS, "black", fontSize);
+      return <Icon />;
     case "apollo":
       return <StyledImage src={Apollo} />;
     default:
