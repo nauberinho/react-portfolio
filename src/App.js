@@ -31,7 +31,9 @@ import Skills from "./views/Skills";
 import mediaQueries from "./shared/media-queries";
 
 const Container = styled.div`
-  font-family: 'Athiti', sans-serif;
+  display: flex;
+  flex-direction: column;
+  font-family: "Athiti", sans-serif;
   overflow-x: hidden;
   min-height: 100vh;
   background: rgba(255, 255, 255, 1);
@@ -124,16 +126,15 @@ const Container = styled.div`
 // });
 
 const App = () => {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false)
-  const toggleDrawer = () =>
-    setIsDrawerOpen(!isDrawerOpen)
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const toggleDrawer = () => setIsDrawerOpen(!isDrawerOpen);
 
   return (
     <Container>
       <Router>
         <Menu toggleDrawer={toggleDrawer} />
         <Drawer isOpen={isDrawerOpen} onClose={toggleDrawer} />
-        <Route exact path="/" component={() => <Redirect to='/about' />} />
+        <Route exact path="/" component={() => <Redirect to="/about" />} />
         <Route exact path="/about" component={About} />
         <Route exact path="/work" component={Work} />
         <Route exact path="/knowledge" component={Skills} />
@@ -141,6 +142,6 @@ const App = () => {
       </Router>
     </Container>
   );
-}
+};
 
 export default App;

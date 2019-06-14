@@ -1,22 +1,18 @@
 import React from "react";
 import PropTypes from "react-proptypes";
 import styled from "styled-components";
-import { Link } from 'react-router-dom';
-import { Icon } from 'semantic-ui-react';
+import { Link } from "react-router-dom";
+import { Icon } from "semantic-ui-react";
 import FormatQuoteIcon from "@material-ui/icons/FormatQuote";
-import {
-  MdLocationOn,
-} from "react-icons/md";
-import {
-  FaCircle,
-} from "react-icons/fa";
+import { MdLocationOn } from "react-icons/md";
+import { FaCircle } from "react-icons/fa";
 
 import SectionContainer from "../../shared/components/SectionContainer";
 import Avatar from "@material-ui/core/Avatar";
 import image from "../../static/images/me.png";
 import theme from "../../shared/theme";
 import mediaQueries from "../../shared/media-queries";
-import { about } from '../../static/data';
+import { about } from "../../static/data";
 
 const Content = styled.div`
   @media ${mediaQueries.laptop("min")} {
@@ -33,27 +29,27 @@ const Content = styled.div`
 `;
 
 const Heading = styled.div`
-@media ${mediaQueries.laptop("min")} {
-  padding: 0 5rem;
-}
-@media ${mediaQueries.tablet("min")} {
-  padding: 0
-}
-@media ${mediaQueries.laptop("max")} {
-  padding: 0;
-}
-color: ${theme.colors.black.main}
-`
+  @media ${mediaQueries.laptop("min")} {
+    padding: 0 5rem;
+  }
+  @media ${mediaQueries.tablet("min")} {
+    padding: 0;
+  }
+  @media ${mediaQueries.laptop("max")} {
+    padding: 0;
+  }
+  color: ${theme.colors.black.main};
+`;
 
 const Title = styled.div`
   font-size: 1.7rem;
   font-weight: bold;
-`
+`;
 
 const Introduction = styled.div`
   padding: 1rem 0;
   font-size: 1.3rem;
-`
+`;
 
 const TextContainer = styled.div`
   flex: 2;
@@ -61,27 +57,25 @@ const TextContainer = styled.div`
   @media ${mediaQueries.laptop("min")} {
     font-size: 1.15rem;
   }
-  
+
   color: ${theme.colors.black.main};
 `;
 
-const Story = styled.div`
-
-`
+const Story = styled.div``;
 
 const StatusWrapper = styled.div`
   width: 100%;
   padding: 2rem 0;
   display: flex;
-`
+`;
 
 const StatusItem = styled.div`
   padding: 0 1rem 0 0rem;
   display: flex;
-  svg{
-    margin:auto;
+  svg {
+    margin: auto;
   }
-`
+`;
 
 const Image = styled.div`
   display: flex;
@@ -90,7 +84,7 @@ const Image = styled.div`
     justify-content: center;
     padding: 3rem 0;
   }
-  
+
   justify-content: flex-end;
 `;
 
@@ -124,37 +118,38 @@ const StyledLink = styled.a`
     margin-top: auto;
     display: inline-block;
   }
-`
+`;
 const StyledCircle = styled(FaCircle)`
-font-size: 0.5rem;
-`
+  font-size: 0.5rem;
+`;
 
 const About = () => {
   return (
     <SectionContainer>
-      <Heading><Title>About me</Title>
-        <Introduction></Introduction>
+      <Heading>
+        <Title>About me</Title>
+        <Introduction />
       </Heading>
 
       <Content>
-
         <TextContainer>
           <Story>
-          <StyledQuoteIcon />
-          {about.text}
-          <StyledQuoteIcon />
+            <StyledQuoteIcon />
+            {about.text}
+            <StyledQuoteIcon />
           </Story>
           <StatusWrapper>
             <StatusItem>
-            <StyledCircle /> 
-            &nbsp;&nbsp;Consulting developer
+              <StyledCircle />
+              &nbsp;&nbsp;Consulting developer
             </StatusItem>
             <StatusItem>
-            <MdLocationOn/>&nbsp;&nbsp;Gothenburg, Sweden
+              <MdLocationOn />
+              &nbsp;&nbsp;Gothenburg, Sweden
             </StatusItem>
           </StatusWrapper>
         </TextContainer>
-        
+
         <Image>
           <StyledAvatar alt="Me" src={image} />
         </Image>

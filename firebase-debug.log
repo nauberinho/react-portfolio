@@ -1,0 +1,13 @@
+[debug] [2019-06-14T22:14:39.650Z] ----------------------------------------------------------------------
+[debug] [2019-06-14T22:14:39.653Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Iamnauber\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2019-06-14T22:14:39.654Z] CLI Version:   5.1.1
+[debug] [2019-06-14T22:14:39.654Z] Platform:      win32
+[debug] [2019-06-14T22:14:39.654Z] Node Version:  v8.11.1
+[debug] [2019-06-14T22:14:39.655Z] Time:          Sat Jun 15 2019 00:14:39 GMT+0200 (Västeuropa, sommartid)
+[debug] [2019-06-14T22:14:39.655Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-14T22:14:39.667Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-14T22:14:39.668Z] > authorizing via signed-in user
+[debug] [2019-06-14T22:14:39.668Z] [iam] checking project niklasnauber-a3739 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-06-14T22:14:39.671Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/niklasnauber-a3739:testIamPermissions  
+

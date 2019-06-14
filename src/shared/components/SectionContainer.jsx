@@ -5,6 +5,7 @@ import mediaQueries from "../media-queries";
 import { fadeIn } from "../keyframes";
 
 const Container = styled.div`
+  margin: auto;
   background: white;  
   overflow: hidden;
   word-wrap: break-word;
