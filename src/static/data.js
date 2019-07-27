@@ -61,6 +61,17 @@ const projects = [
     description: ""
   },
   {
+    title: "Facebook Messenger API",
+    techniques: ["node.js"],
+    description: "Creating a node.js server which connects and listens to facebook user chatting with a Facebook page.",
+    links: [
+      {
+        url: "https://github.com/nauberinho/facebook-messenger-api",
+        text: GO_TO_REPOSITORY
+      }
+    ]
+  },
+  {
     title: "Pdgeon",
     techniques: ["react", "firebase"],
     description: "",
@@ -103,8 +114,12 @@ const projects = [
     description: "",
     links: [
       {
-        url: "https://bitbucket.org/niknau/apply-for-jobs-be/src",
+        url: "https://bitbucket.org/niknau/alcoholcalculation/src",
         text: GO_TO_REPOSITORY
+      },
+      {
+        url: "https://alcohol-calculation.firebaseapp.com/",
+        text: GO_TO_WEBSITE
       }
     ]
   },
