@@ -39,6 +39,30 @@ const projects = [
     ]
   },
   {
+    title: "TypeScript and GraphQL - a blog application",
+    techniques: ["python", "react", "graphql"],
+    links: [
+      {
+        url: "https://github.com/nauberinho/blog-application-client-side",
+        text: GO_TO_REPOSITORY_FRONT_END
+      },
+      {
+        url: "https://github.com/nauberinho/blog-application-server-side",
+        text: GO_TO_REPOSITORY_BACK_END
+      }
+    ]
+  },
+  {
+    title: "React Elems - an npm package",
+    techniques: ["react"],
+    links: [
+      {
+        url: "https://github.com/nauberinho/react-elems",
+        text: GO_TO_REPOSITORY
+      }
+    ]
+  },
+  {
     title: "Fantasy Premier League, live updated",
     techniques: ["react"],
     links: [
