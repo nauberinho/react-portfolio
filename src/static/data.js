@@ -39,6 +39,18 @@ const projects = [
     ]
   },
   {
+    title: "Fantasy Premier League, live updated",
+    techniques: ["react"],
+    links: [
+      {
+        url: "https://github.com/nauberinho/fpl-raw/tree/master/src",
+        text: GO_TO_REPOSITORY
+      }
+    ],
+    description:
+      "A live updated application to display league tables, making use of the Fantasy Premier League API."
+  },
+  {
     title: "Apollo-GraphQL collab",
     techniques: ["graphql", "apollo", "react"],
     links: [
@@ -63,7 +75,8 @@ const projects = [
   {
     title: "Facebook Messenger API",
     techniques: ["node.js"],
-    description: "Creating a node.js server which connects and listens to facebook user chatting with a Facebook page.",
+    description:
+      "Creating a node.js server which connects and listens to facebook user chatting with a Facebook page.",
     links: [
       {
         url: "https://github.com/nauberinho/facebook-messenger-api",
