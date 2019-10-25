@@ -6,6 +6,12 @@ const GO_TO_REPOSITORY = "Go to repository",
 
 const projects = [
   {
+    title: "Volvo Group",
+    techniques: ["react"],
+    description: `I've gotten the chance to be part of a team of four developers with the mission to build the company's new support portal. The portal aims to help employees and partners in maintain, troubleshoot and keep track of over 1,000,000 connected vehicles all over the world. `,
+    links: [{ url: "www.volvogroup.com", text: GO_TO_WEBSITE }]
+  },
+  {
     title: "Livekvitto",
     techniques: ["react", "node.js", "firebase", "stripe"],
     techStack: [

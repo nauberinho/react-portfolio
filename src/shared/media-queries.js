@@ -15,8 +15,7 @@ const mediaQueries = {
   tablet: limit => `(${limit}-width: ${mqSizes.tablet})`,
   laptop: limit => `(${limit}-width: ${mqSizes.laptop})`,
   laptopL: limit => `(${limit}-width: ${mqSizes.laptopL})`,
-  desktop: limit => `(${limit}-width: ${mqSizes.desktop})`,
-  desktopL: limit => `(${limit}-width: ${mqSizes.desktop})`
+  desktop: limit => `(${limit}-width: ${mqSizes.desktop})`
 };
 
 export default mediaQueries;

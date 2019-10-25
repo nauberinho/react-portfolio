@@ -3,7 +3,7 @@ import PropTypes from "react-proptypes";
 
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { MdMenu } from 'react-icons/md';
+import { MdMenu } from "react-icons/md";
 
 import { withRouter } from "react-router-dom";
 
@@ -19,10 +19,10 @@ const Container = styled.div`
     padding: 2rem 3rem;
   }
   @media ${mediaQueries.laptop("max")} {
-    padding: 2rem 1rem;
+    padding: 2rem 3rem;
   }
   @media ${mediaQueries.tablet("max")} {
-    padding: 0rem 1rem 2rem;
+    padding: 0rem 2rem 2rem;
     background: none;
   }
 `;
@@ -31,7 +31,7 @@ const LogoWrapper = styled.div`
   display: flex;
   flex: 1;
   font-weight: bold;
-  
+
   @media ${mediaQueries.tablet("min")} {
     padding: 2rem 0;
     font-size: 1.7rem;
@@ -66,14 +66,14 @@ const MenuWrapperMobile = styled(MenuWrapper)`
   }
   flex: 0;
   font-size: 1.4rem;
-`
+`;
 
-const MenuWrapperDesktop = styled(MenuWrapper)` 
+const MenuWrapperDesktop = styled(MenuWrapper)`
   @media ${mediaQueries.tablet("max")} {
-      display: none;
+    display: none;
   }
   display: flex;
-`
+`;
 
 const StyledLink = styled(Link)`
   && {
@@ -93,7 +93,7 @@ const StyledButton = styled.button`
   @media ${mediaQueries.tablet("max")} {
     font-size: 1.8rem;
   }
-  font-family: 'Athiti', sans-serif!important;
+  font-family: "Athiti", sans-serif !important;
   font-weight: 550;
   background: none;
   margin: auto;
@@ -108,11 +108,14 @@ const Menu = props => {
   return (
     <Container>
       <LogoWrapper>
-
-        <LogoBlackSpan>niklas nauber<LogoYellowSpan>.</LogoYellowSpan> </LogoBlackSpan>
+        <LogoBlackSpan>
+          niklas nauber<LogoYellowSpan>.</LogoYellowSpan>{" "}
+        </LogoBlackSpan>
       </LogoWrapper>
       <MenuWrapperMobile>
-        <StyledButton onClick={props.toggleDrawer}><MdMenu /></StyledButton>
+        <StyledButton onClick={props.toggleDrawer}>
+          <MdMenu />
+        </StyledButton>
       </MenuWrapperMobile>
       <MenuWrapperDesktop>
         <StyledLink to="about">

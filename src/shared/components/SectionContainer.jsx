@@ -6,7 +6,7 @@ import { fadeIn } from "../keyframes";
 
 const Container = styled.div`
   margin: auto;
-  background: white;  
+  background: white;
   overflow: hidden;
   word-wrap: break-word;
   animation: ${fadeIn} 0.5s ease;
@@ -17,17 +17,15 @@ const Container = styled.div`
     padding: 1rem 3rem 3rem;
   }
   @media ${mediaQueries.laptop("max")} {
-    padding: 1rem
+    padding: 3rem;
   }
   @media ${mediaQueries.tablet("max")} {
-    padding: 1rem
+    padding: 2rem;
     background: none;
   }
   @media ${mediaQueries.mobileM("max")} {
-    padding: 1rem
+    padding: 1rem;
   }
-  
-  
 `;
 
 const SectionContainer = ({ children }) => {

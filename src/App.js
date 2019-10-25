@@ -88,20 +88,20 @@ const Container = styled.div`
   a {
     text-decoration: none;
   }
-  @media ${mediaQueries.desktop("min")} {
-    padding: 0rem 35rem;
+  @media ${mediaQueries.mobileS("min")} {
+    padding: 0rem;
+  }
+  @media ${mediaQueries.tablet("min")} {
+    padding: 0rem 10rem;
+  }
+  @media ${mediaQueries.laptop("min")} {
+    padding: 0rem 20rem;
   }
   @media ${mediaQueries.laptopL("min")} {
     padding: 0rem 30rem;
   }
-  @media ${mediaQueries.laptopL("max")} {
-    padding: 0rem 10rem;
-  }
-  @media ${mediaQueries.laptop("max")} {
-    padding: 0rem 2rem;
-  }
-  @media ${mediaQueries.tablet("max")} {
-    padding: 0rem;
+  @media ${mediaQueries.desktop("min")} {
+    padding: 0rem 50rem;
   }
 `;
 

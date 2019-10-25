@@ -42,7 +42,7 @@ const Heading = styled.div`
 `;
 
 const Title = styled.div`
-  font-size: 1.7rem;
+  font-size: 2rem;
   font-weight: bold;
 `;
 
@@ -52,21 +52,26 @@ const Introduction = styled.div`
 `;
 
 const TextContainer = styled.div`
+  font-size: 1.4rem;
   flex: 2;
   line-height: 1.4rem;
-  @media ${mediaQueries.laptop("min")} {
-    font-size: 1.15rem;
-  }
-
   color: ${theme.colors.black.main};
 `;
 
 const Story = styled.div``;
 
+const GoldenLine = styled.div`
+  margin-top: 1rem;
+  border: 1px solid ${theme.colors.yellow.main};
+  width: 50%;
+  border-radius: 5px;
+`;
+
 const StatusWrapper = styled.div`
   width: 100%;
-  padding: 2rem 0;
+  padding: 4rem 0;
   display: flex;
+  font-size: 1.4rem;
 `;
 
 const StatusItem = styled.div`
@@ -75,6 +80,10 @@ const StatusItem = styled.div`
   svg {
     margin: auto;
   }
+`;
+
+const StatusSpan = styled.div`
+  margin-left: 0.5rem;
 `;
 
 const Image = styled.div`
@@ -138,14 +147,15 @@ const About = () => {
             {about.text}
             <StyledQuoteIcon />
           </Story>
+          <GoldenLine />
           <StatusWrapper>
             <StatusItem>
               <StyledCircle />
-              &nbsp;&nbsp;Consulting developer
+              <StatusSpan>Consulting developer</StatusSpan>
             </StatusItem>
             <StatusItem>
               <MdLocationOn />
-              &nbsp;&nbsp;Gothenburg, Sweden
+              <StatusSpan>Gothenburg, Sweden</StatusSpan>
             </StatusItem>
           </StatusWrapper>
         </TextContainer>
