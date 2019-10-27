@@ -35,8 +35,10 @@ const FooterSection = styled.div`
 
 const CompanyInfo = styled.div`
   padding: 1rem;
-  div {
-    text-align: left;
+  @media ${mediaQueries.tablet("min")} {
+    div {
+      text-align: left;
+    }
   }
 `;
 
@@ -56,26 +58,13 @@ const SocialMediaText = styled.div`
   text-decoration: none;
 `;
 
-const GitHub = styled.div`
-  display: flex;
-  margin: 1rem auto;
-  line-height: 1.4rem;
-  @media ${mediaQueries.tablet("min")} {
-    flex: 1;
-  }
-`;
-const BitBucket = styled.div`
-  display: flex;
-  margin: 1rem auto;
-  @media ${mediaQueries.tablet("min")} {
-    flex: 1;
-  }
-`;
-
 const Email = styled.div`
-  padding: 1rem;
-  div {
-    text-align: center;
+  padding: 2rem 0;
+  @media ${mediaQueries.tablet("min")} {
+    div {
+      text-align: left;
+      margin: auto;
+    }
   }
 `;
 
@@ -99,13 +88,12 @@ const Footer = () => {
           <div>© 2019, Nauber Tech AB</div>
           <div>559220-4068</div>
           <div>Innehar F-skattsedel</div>
+          <Email>
+            <div>niklas.nauber@hotmail.com</div>
+          </Email>
         </CompanyInfo>
       </FooterSection>
-      <FooterSection>
-        <Email>
-          <div>niklas.nauber@hotmail.com</div>
-        </Email>
-      </FooterSection>
+      <FooterSection />
       <FooterSection>
         <SocialMedia>
           <StyledLink
