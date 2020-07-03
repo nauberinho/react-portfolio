@@ -10,11 +10,9 @@ import { techniques } from "../../static/data";
 
 const Content = styled.div`
   @media ${mediaQueries.laptop("min")} {
-    display: flex;
     padding: 0 5rem;
   }
   @media ${mediaQueries.tablet("min")} {
-    display: flex;
     padding: 2rem 0;
   }
   @media ${mediaQueries.laptop("max")} {
